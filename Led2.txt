@@ -1,0 +1,30 @@
+from gpiozero import LED
+from gpiozero import DistanceSensor
+
+sensor = DistanceSensor( echo=23, trigger=24)
+
+green_led = LED(17)
+amber_led = LED(22)
+red_led = LED(27)
+
+while True:
+
+distance = sensor.distance*100
+print("Distance : ", distance)
+
+//print(f"Distance : {distance:.2f} cm")
+
+if distance < 20 
+	green_led.off()
+	qamber_led.off()
+	red_led.on()
+
+else distance > 80
+	green_led.on()
+	qamber_led.off()
+	red_led.off()
+
+else
+	green_led.off()
+	qamber_led.on()
+	red_led.off()
